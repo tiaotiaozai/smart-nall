@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>samart nall商城</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/base.css" rel="stylesheet">
+</head>
+<body>
+    <div id="warpper">
+        <nav class="nav-menu width-min">
+            <!--jquery加载导航-->
+        </nav>
+        <div class="width-min">
+            <div class="parts-main">
+                <div class="parts-top flex-layout">
+                    <div class="gallery-wrapper clearfix">
+                        <div class="thumbnail">
+                            <ul>
+                                <li class="ng-scope">
+                                    <img src="images/parts_li_01.png">
+                                </li>
+                                <li class="ng-scope">
+                                    <img src="images/parts_li_01.png">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="thumb">
+                            <ul>
+                                <li class="ng-scope">
+                                    <img src="images/parts_li_02.png">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="banner">
+                        <div class="banner-top">
+                            <h2>smartnail小钉扫地机器人滤网</h2>
+                            <p>扫地机器人的口罩 有效过滤灰尘</p>
+                        </div>
+                        <div class="banner-center">
+                            <div class="price-div">
+                                <div>
+                                    <span class="price-word">价格</span>
+                                    <span class="old-price">￥45</span>
+                                </div>
+                                <div>
+                                    <span class="price-word">促销价</span>
+                                    <span class="price-tip">￥</span>
+                                    <span class="new-price">35</span>
+                                </div>
+                            </div>
+                            <div class="num-div">
+                                <span class="num-word">数量</span>
+                                <span class="minus"></span>
+                                <span class="num">1</span>
+                                <span class="add"></span>
+                            </div>
+                        </div>
+                        <div class="banner-buttom">
+                            <span class="cart-button"><a href="#">加入购物车</a></span>
+                            <span class="buy-button"><a href="#">现在购买</a></span>
+                            <p>本商品支持 7 天无理由退货，15 天质量问题免费换货。</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="about-menu">
+                        <ul>
+                            <li class="tab-title active"><a class="color9">产品信息</a><span class="color9">|</span></li>
+                            <li class="tab-title"><a class="color9">规格参数</a><span class="color9">|</span></li>
+                            <li class="tab-title"><a class="color9">用户评价</a></li>
+                        </ul>
+                    </div>
+                    <div class="parts-img">
+                        <img src="images/parts_li_03.png">
+                        <img src="images/parts_li_04.png">
+                        <img src="images/parts_li_05.png">
+                        <img src="images/parts_li_06.png">
+                    </div>
+                    <div class="parts-para">
+                        <h2>规格参数</h2>
+                        <table>
+                            <tr>
+                                <td>颜色</td>
+                                <td>白色</td>
+                            </tr>
+                            <tr>
+                                <td>商品编号</td>
+                                <td>88888888</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="parts-discuss">
+                        <div class="discuss-title">
+                            <span>用户评论</span>
+                            <div>
+                                <span>好评度</span>
+                                <span class="word-big color-red">99</span>
+                                <span class="color-red">%</span>
+                            </div>
+                        </div>
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="user-logo">
+                                        <img src="images/user-logo.png">
+                                        <p>用户名</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="discuss">
+                                        <p><i class="star"></i><i class="star"></i><i class="star"></i><i class="star"></i></p>
+                                        <p>感觉可以用很久，但是还是买了个备用</p>
+                                        <img src="images/discuss_01.png">
+                                        <p>2017年11月9日</p>
+                                        <p><span class="color-red">小钉商城回复：</span>您的支持，永远是我们需要变得更好的理由！</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-logo">
+                                        <img src="images/user-logo.png">
+                                        <p>用户名</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="discuss">
+                                        <p><i class="star"></i><i class="star"></i><i class="star"></i><i class="star"></i></p>
+                                        <p>感觉可以用很久，但是还是买了个备用</p>
+                                        <img src="images/discuss_01.png">
+                                        <p class="time">2017年11月9日</p>
+                                        <p class="line"><span class="color-red">小钉商城回复：</span>您的支持，永远是我们需要变得更好的理由！</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <p class="show-more"><a href="#">查看更多评价</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer width-min">
+            <!--jquery加载尾部-->
+        </footer>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        $().ready(function(){
+            $(".nav-menu").load("nav.html");
+            $(".footer").load("footer.html");
+        });
+        $(".minus").mouseover(function(){
+            $(this).css("background","url(images/tips.png) -71px -92px");
+        });
+        $(".minus").mouseout(function(){
+            $(this).css("background","url(images/tips.png) 1px -92px");
+        });
+        $(".add").mouseover(function(){
+            $(this).css("background","url(images/tips.png) -60px -56px");
+        });
+        $(".add").mouseout(function(){
+            $(this).css("background","url(images/tips.png) -35px -92px");
+        });
+    </script>
+</body>
+</html>

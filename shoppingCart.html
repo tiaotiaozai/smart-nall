@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>samart nall商城</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/base.css" rel="stylesheet">
+</head>
+<body>
+    <div id="warpper">
+        <nav class="nav-menu width-min">
+            <!--jquery加载导航-->
+        </nav>
+        <div class="width-min">
+            <div class="server-main shopping-main">
+                <h1>我的购物车</h1>
+                <div class="shopping-content">
+                    <table class="title-table">
+                        <tbody>
+                        <th colspan="3" class="goods-td1 text-left">商品</th>
+                        <th class="pice-td">单价</th>
+                        <th class="count-td">数量</th>
+                        <th class="pice2-td">实付款</th>
+                        <th class="ope-td">操作</th>
+                        </tbody>
+                    </table>
+                    <table class="shopping-table">
+                        <tr class="tr2">
+                            <td class="td1">
+                                <i class="check-icon"></i>
+                            </td>
+                            <td class="td2">
+                                <img class="v-middle" src="images/order_01.png">
+                            </td>
+                            <td class="td3">
+                                <p class="goods-title">小钉智能扫地机器人smartnail d95</p>
+                                <p>白色</p>
+                            </td>
+                            <td class="td4">
+                                <p class="old-price">￥1699</p>
+                                <p class="color-red">￥1299</p>
+                            </td>
+                            <td class="td5">
+                                <span class="minus"></span>
+                                <span class="num">1</span>
+                                <span class="add"></span>
+                            </td>
+                            <td class="td6">￥0.00</td>
+                            <td class="td7">
+                                <a class="go-button" href="#">立即支付</a>
+                                <p>查看详情</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <footer class="footer width-min">
+            <!--jquery加载尾部-->
+        </footer>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        $().ready(function(){
+            $(".nav-menu").load("nav.html");
+            $(".footer").load("footer.html");
+        });
+
+        $(".server-menu").delegate("li", "click", function () {
+            var index = $(this).index();
+            $(this).addClass('active').siblings('.tab-title').removeClass("active");
+            $('.tab-content').eq(index).show().siblings('.tab-content').hide();
+        });
+
+        $(".order-top").delegate(".list-item", "click", function () {
+            var index = $(this).index();
+            $(this).addClass('active').siblings('.list-item').removeClass("active");
+            $('.order-tab').eq(index).show().siblings('.order-tab').hide();
+        });
+    </script>
+</body>
+</html>
