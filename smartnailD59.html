@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>samart nall商城</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/base.css" rel="stylesheet">
+</head>
+<body>
+    <div id="warpper" class="warpper">
+        <nav class="nav-menu width-min">
+            <!--jquery加载导航-->
+        </nav>
+        <div class="d1-warpper width-min">
+            <div class="d1-title width-min">
+                <div class="title-content">
+                    <div>smartnailD95</div>
+                    <ul>
+                        <li class="active"><a href="#">概述</a></li>
+                        <li><a href="#">传感器</a></li>
+                        <li><a href="#">清扫系统</a></li>
+                        <li><a href="#">设计</a></li>
+                        <li><a href="#">图库</a></li>
+                        <li><a href="#">参数</a></li>
+                        <li><a href="#">在线购买</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d1-content">
+                <div class="d1-tab active">
+                    <img src="images/smartnailD95/smartnailD95_01.png">
+                    <img src="images/smartnailD95/smartnailD95_02.png">
+                    <img src="images/smartnailD95/smartnailD95_03.png">
+                    <img src="images/smartnailD95/smartnailD95_04.png">
+                    <img src="images/smartnailD95/smartnailD95_05.png">
+                    <img src="images/smartnailD95/smartnailD95_06.png">
+                    <img src="images/smartnailD95/smartnailD95_07.png">
+                    <img src="images/smartnailD95/smartnailD95_08.png">
+                    <div class="img-div">
+                        <img src="images/smartnailD95/smartnailD95_09.png">
+                        <a href="#">了解更多传感器＞</a>
+                    </div>
+
+                    <img src="images/smartnailD95/smartnailD95_10.png">
+                    <img src="images/smartnailD95/smartnailD95_11.png">
+                    <img src="images/smartnailD95/smartnailD95_12.png">
+                    <img src="images/smartnailD95/smartnailD95_13.png">
+                    <img src="images/smartnailD95/smartnailD95_14.png">
+                    <div class="word-div">
+                        <p>smartnail D95是如何轻松应对复杂<br>家庭环境的？</p>
+                        <a class="color-red" href="#">继续了解传感器＞</a>
+                    </div>
+                </div>
+                <div class="d1-tab">
+                    <img src="images/smartnailD95/smartnailD95_tab2_01.png">
+                    <img src="images/smartnailD95/smartnailD95_tab2_02.png">
+                    <img src="images/smartnailD95/smartnailD95_tab2_03.png">
+                    <img src="images/smartnailD95/smartnailD95_tab2_04.png">
+                    <img src="images/smartnailD95/smartnailD95_tab2_05.png">
+                    <img src="images/smartnailD95/smartnailD95_tab2_06.png">
+                    <img src="images/smartnailD95/smartnailD95_tab2_07.png">
+                    <img src="images/smartnailD95/smartnailD95_tab2_08.png">
+                    <img src="images/smartnailD95/smartnailD95_tab2_09.png">
+                    <img src="images/smartnailD95/smartnailD95_tab2_10.png">
+                    <div class="word-div">
+                        <p>smartnail D95 强大的清扫能力<br>来自哪里？</p>
+                        <a class="color-red" href="#">继续了解传感器＞</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer width-min">
+            <!--jquery加载尾部-->
+        </footer>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        $().ready(function(){
+            $(".nav-menu").load("nav.html");
+            $(".footer").load("footer.html");
+        });
+        $(window).scroll(function(event){
+            var top=$(window).scrollTop();
+            console.log(top);
+            if(top==0){
+                $(".d1-title").removeClass('pos-top');
+            }else {
+                $(".d1-title").addClass('pos-top');
+            }
+
+        });
+        $(".title-content").delegate("li", "click", function () {
+            var index = $(this).index();
+            $(this).addClass('active').siblings('li').removeClass("active");
+            $('.d1-tab').eq(index).show().siblings('.d1-tab').hide();
+        });
+    </script>
+</body>
+</html>
